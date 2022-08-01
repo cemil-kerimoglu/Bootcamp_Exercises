@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>README.md</title>
+    <style></style>
+  </head>
+  <body id="preview">
+    <h1 class="code-line"><a id="Random_User_0"></a>Random User</h1>
+    <p>
+      <img
+        src="https://media.giphy.com/media/YqGeOQ0u6hB5u/giphy.gif"
+        alt="Random"
+      />
+    </p>
+    <h2>Goal</h2>
+    <p>
+      Understand how to use JSON, map(), and props. <br />
+      Bonus: refactor the app using useState and useEffect.
+    </p>
+    <h2>To do</h2>
+
+    <h3>Level 1</h3>
+    <ol start="0">
+      <li>
+        You are given a JSON file (<code>users.json</code>) containing mock data
+        about some random users. This file is already imported at the top of you
+        <code>App.js</code>
+        and contains data that is ready to be used. Your first task is to open
+        this JSON file and see how the data is structured.
+      </li>
+      <li>
+        For each user contained inside this JSON file, create a component
+        <code>&lt;User&gt;</code> (thanks to
+        <a
+          target="_blank"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"
+          >map()</a
+        >) and pass all the data from the user as <strong>props</strong>
+      </li>
+      <li>
+        Inside the <code>&lt;User&gt;</code> component, pass the rest of the
+        data to the <code>&lt;Contact&gt;</code> component.
+      </li>
+    </ol>
+    <p>
+      <em
+        >Hint: You can use the
+        <a
+          target="_blank"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+          >spread operator</a
+        >
+        to pass the props.</em
+      >
+    </p>
+    <h3>Level 2</h3>
+    <ol start="0">
+      <li>
+        When you are finished with level 1 and everything works as expected;
+        refactor your application so that you don't use mock data from the JSON
+        file anymore, but "live" data coming from an API. For this, we are going
+        to use the <strong>RandomUser</strong> API. Try to read up the
+        <a href="https://randomuser.me/documentation" target="_blank">
+          documentation
+        </a>
+        and understand how the API works
+      </li>
+      <li>
+        Using a React Hook (useState); build a state that will accomodate the
+        users you are going to query
+      </li>
+      <li>
+        Using a React Hook (useEffect) + Fetch, query the correct endpoint (<a
+          href="https://randomuser.me/documentation#multiple"
+          target="_blank"
+          >hint</a
+        >) that will return 10 random users.
+      </li>
+      <li>
+        Change the data you map upon from the mock data to the data you fetched
+        from the API. Thanks for the fact that the data is shaped the same way;
+        you should not see any difference and your app should work the same!
+        Because fetch is an asynchronous operation, make sure you prevent the
+        map() to run until <i>after</i> the data has been successfuly set in the
+        state (<a
+          href="https://linguinecode.com/post/4-techniques-conditional-render-react-props-state"
+          target="_blank"
+          >hint</a
+        >)
+      </li>
+    </ol>
+    <h3>Level 3 (optional)</h3>
+    <ol start="0">
+      <li>
+        To play around with the API; create 3 buttons in the App.js file. One
+        button should say "<strong>Show only Men</strong>", the other "<strong
+          >Show only Women</strong
+        >", and the third "<strong>Show both</strong>". Find a way to
+        conditionaly pass a gender parameter to the endpoint you're calling.
+      </li>
+    </ol>
+    <h3>Level 4 (optional)</h3>
+    <ol start="0">
+      <li>
+        Create a dropdown select menu (<a
+          href="https://reactjs.org/docs/forms.html#the-select-tag"
+          target="_blank"
+          >hint</a
+        >) that will allow you to choose how many users are returned by the API
+      </li>
+    </ol>
+  </body>
+</html>
