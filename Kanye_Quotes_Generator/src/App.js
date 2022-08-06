@@ -26,7 +26,6 @@ const App = () => {
           "There was a problem loading a Kanye quote, please try again later"
         );
         setIsError(true);
-        // alert(error.message);
       }
     };
     setInterval(() => loadQuote(), 5000);
@@ -39,9 +38,8 @@ const App = () => {
       </h1>
       <KanyeGif />
       <h2>QUOTE</h2>
-      {/* Your code here! */}
       <BounceLoader loading={loading} />
-      {isError ? <Error /> : <Quote prevQuotes={prevQuotes} />}
+      {isError ? <Error /> : <Quote kanyeQuotes={prevQuotes} />}
     </div>
   );
 };
